@@ -1,6 +1,5 @@
 <!-- @format -->
 
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,11 +12,12 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><h1>The Tech Blog</h1></a>
+        <a class="navbar-brand" href="#">The Tech Blog</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -32,18 +32,55 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="/home"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Dashboard</a>
+              <a class="nav-link active" href="/dashboard">Dashboard</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
-            <button class="btn btn-light me-2" type="button">Log Out</button>
+            <button class="btn btn-light me-2" type="submit" id="LogOut">
+              Log Out
+            </button>
           </form>
         </div>
       </div>
     </nav>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="post-user">Featured</span
+        ><span class="post-time">12/30/2022</span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+          With supporting text below as a natural lead-in to additional content.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush comment">
+        <li class="list-group-item comment">
+          <span class="commenter"
+            ><h6>UserName</h6>
+            <p class="comment-time">12/30/2022</p></span
+          >
+          <p>This is a comment</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Featured</div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+          With supporting text below as a natural lead-in to additional content.
+        </p>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

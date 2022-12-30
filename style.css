@@ -1,1 +1,24 @@
 /** @format */
+
+.card {
+  margin: 1.2rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment {
+  padding-left: 2rem;
+}
+
+.commenter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-time {
+  font-size: small;
+  color: gray;
+}
