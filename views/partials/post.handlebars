@@ -1,15 +1,22 @@
 <div class="card">
   <div class="card-header">
-    <span class="post-user">Featured</span>
-    <span class="post-time">|
-      {{format_date created_at}}|
-    </span>
+    <span class="post-user">{{post.username}}</span><span
+      class="post-time"
+    >{{post.post_time}}</span>
   </div>
   <div class="card-body">
-    <h5 class="card-title"><a href="/post/{{id}}">{{title}}</a></h5>
+    <h5 class="card-title">{{post.title}}</h5>
     <p class="card-text">
-      {{post_content}}
+      {{post.post_content}}
     </p>
   </div>
-
+  <ul class="list-group list-group-flush comment">
+    {{#each comments as |comment|}}
+      <li class="list-group-item comment">
+        <span class="commenter"><h6>{{comment.comment_username}}</h6>
+          <p class="comment-time">{{comment.comment_time}}</p></span>
+        <p>{{comment.comment_content}}</p>
+      </li>
+    {{/each}}
+  </ul>
 </div>

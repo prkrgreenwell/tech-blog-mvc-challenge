@@ -17,11 +17,11 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    content: {
+    post_content: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    date_created: {
+    post_time: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,

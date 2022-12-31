@@ -49,36 +49,35 @@
       </div>
     </nav>
 
-    <div class="card">
-      <div class="card-header">
-        <span class="post-user">Featured</span
-        ><span class="post-time">12/30/2022</span>
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">
-          With supporting text below as a natural lead-in to additional content.
-        </p>
-      </div>
-      <ul class="list-group list-group-flush comment">
-        <li class="list-group-item comment">
-          <span class="commenter"
-            ><h6>UserName</h6>
-            <p class="comment-time">12/30/2022</p></span
-          >
-          <p>This is a comment</p>
-        </li>
-      </ul>
-    </div>
+    <div class="col-md-6">
+      <h3 class="create-post-title">Write New Blog Post:</h3>
 
-    <div class="card">
-      <div class="card-header">Featured</div>
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">
-          With supporting text below as a natural lead-in to additional content.
-        </p>
-      </div>
+      <form class="form new-post-form">
+        <div class="form-group">
+          <label for="post-title">Post Title:</label>
+          <input
+            class="form-input"
+            type="text"
+            id="post-title"
+            name="project-name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="bio">
+            <textarea
+              id="bio"
+              name="bio"
+              rows="3"
+              cols="30"
+              placeholder="Write Blog Post Here"
+            ></textarea>
+          </label>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+      </form>
     </div>
 
     <script

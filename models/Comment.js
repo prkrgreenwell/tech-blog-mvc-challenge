@@ -36,6 +36,11 @@ Comment.init(
         len: [1],
       },
     },
+    comment_time: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
   },
   {
     sequelize,
