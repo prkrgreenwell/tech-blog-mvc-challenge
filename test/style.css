@@ -6,7 +6,7 @@
 
 h1 {
   font-weight: bold;
-  font-size: x-large;
+  font-size: xx-large;
   margin: 10px;
 }
 
@@ -15,6 +15,38 @@ h1 {
 }
 
 h2 {
-  font-size: large;
+  font-size: x-llarge;
   font-weight: bold;
+}
+
+.post {
+  margin: 10%;
+}
+
+.comment-button {
+  display: flex;
+  justify-content: right;
+  padding: 3px;
+}
+
+h3 {
+  font-size: large;
+}
+
+.date,
+.time {
+  font-size: small;
+}
+
+.comment {
+  margin: 2px;
+}
+
+.comment-header {
+  height: 2px;
+  width: 80%;
+}
+
+.comment-body {
+  font-size: small;
 }
