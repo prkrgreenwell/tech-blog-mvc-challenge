@@ -1,6 +1,6 @@
 /** @format */
 
-const seedUser = require("./comment-seed");
+const seedUser = require("./user-seed");
 const seedPost = require("./post-seed");
 const seedComments = require("./comment-seed");
 
