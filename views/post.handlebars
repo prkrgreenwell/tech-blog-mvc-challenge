@@ -17,7 +17,9 @@
       <button class="button is-dark">Comment</button>
     </div>
 
-    {{! commments go here }}
+    {{#each post.comments as |comment|}}
+    {{> comment}}
+    {{/each}}
 
   </article>
 {{/each}}

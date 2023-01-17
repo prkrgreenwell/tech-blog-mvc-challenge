@@ -1,7 +1,7 @@
 /** @format */
 
 const router = require("express").Router();
-const { Post, User } = require("../../models");
+const { Post, User, Comment } = require("../../models");
 
 //CREATE Post
 router.post("/", async (req, res) => {
@@ -27,6 +27,14 @@ router.get("/", async (req, res) => {
         {
           model: User,
           attributes: ["username"],
+        },
+        {
+          model: Comment,
+          attributes: ["comment_text", "comment_time"],
+          include: {
+            model: User,
+            attributes: ["username"],
+          },
         },
       ],
     });
