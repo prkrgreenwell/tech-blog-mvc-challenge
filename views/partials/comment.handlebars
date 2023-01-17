@@ -2,7 +2,8 @@
   <div class="message-header comment-header">
     <h3>{{user.username}}</h3>
     <div class="comment-datetime">
-      <p class="date">{{comment_time}}</p>
+      <p class="date">{{format_date comment_time}}
+        {{format_time comment_time}}</p>
     </div>
   </div>
   <div class="message-body comment-body">

@@ -3,8 +3,8 @@
     <div class="message-header">
       <h3>{{post.title}}</h3>
       <div class="post-datetime">
-        <p class="date">{{post.post_time}}</p>
-        <p class="time">10:07 PM</p>
+        <p class="date">{{format_date post.post_time}}</p>
+        <p class="time">{{format_time post.post_time}}</p>
       </div>
     </div>
     <div class="message-body">
