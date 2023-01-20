@@ -1,0 +1,70 @@
+<button
+  class="button is-danger js-modal-trigger"
+  data-target="create-post-modal"
+  id="create-post"
+>Create Post</button>
+
+{{#if posts.length}}
+  {{#each posts as |post|}}
+    <article class="message post is-dark">
+      <div class="message-header">
+        <h3>{{post.title}}</h3>
+        <div class="post-datetime">
+          <p class="date">{{format_date post.post_time}}</p>
+          <p class="time">{{format_time post.post_time}}</p>
+        </div>
+      </div>
+      <div class="message-body">
+        <h3>by: {{post.user.username}}</h3>
+        <p>
+          {{post.post_text}}
+        </p>
+      </div>
+      <div class="comment-button">
+        <button class="button is-dark">Comment</button>
+      </div>
+
+      {{#each post.comments as |comment|}}
+        {{!-- {{> comment}} --}}
+      {{/each}}
+
+    </article>
+  {{/each}}
+
+{{else}}
+  <br />
+  <h3>Click the button above to write your first post!</h3>
+{{/if}}
+
+<div id="create-post-modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content card">
+
+    <div class="field">
+      <label class="label is-light">Post Title:</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Post Title" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Blog Post:</label>
+      <div class="control">
+        <textarea
+          class="textarea"
+          placeholder="Write your post here"
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link submit-post">Submit Post</button>
+      </div>
+    </div>
+
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<script src="./js/create-post.js"></script>

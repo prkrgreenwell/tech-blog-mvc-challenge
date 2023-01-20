@@ -50,3 +50,12 @@ h3 {
 .comment-body {
   font-size: small;
 }
+
+#create-post {
+  align-self: center;
+  margin: 10px;
+}
+
+.field {
+  margin: 10px;
+}
