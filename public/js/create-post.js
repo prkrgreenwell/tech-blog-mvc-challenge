@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add a click event on various child elements to close the parent modal
   (
     document.querySelectorAll(
-      ".modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button cancel-post"
+      ".modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button"
     ) || []
   ).forEach(($close) => {
     const $target = $close.closest(".modal");
@@ -47,3 +47,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+const postFormHandler = async (event) => {
+  event.preventDefault();
+  const title = document.querySelector(".post-title").value;
+  const post_text = document.querySelector(".post-content").value;
+
+  const response = await fetch("api/post", {
+    method: "POST",
+    body: JSON.stringify({
+      title,
+      post_text,
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  if (response.ok) {
+    closeModal(document.querySelector(".modal"));
+  } else {
+    alert("Failed to add post");
+  }
+};
+
+document
+  .querySelector("#create-post-form")
+  .addEventListener("submit", postFormHandler);

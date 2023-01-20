@@ -39,30 +39,34 @@
 <div id="create-post-modal" class="modal">
   <div class="modal-background"></div>
   <div class="modal-content card">
-
-    <div class="field">
-      <label class="label is-light">Post Title:</label>
-      <div class="control">
-        <input class="input" type="text" placeholder="Post Title" />
+    <form id="create-post-form">
+      <div class="field">
+        <label class="label is-light">Post Title:</label>
+        <div class="control">
+          <input
+            class="input post-title"
+            type="text"
+            placeholder="Post Title"
+          />
+        </div>
       </div>
-    </div>
 
-    <div class="field">
-      <label class="label">Blog Post:</label>
-      <div class="control">
-        <textarea
-          class="textarea"
-          placeholder="Write your post here"
-        ></textarea>
+      <div class="field">
+        <label class="label">Blog Post:</label>
+        <div class="control">
+          <textarea
+            class="textarea post-content"
+            placeholder="Write your post here"
+          ></textarea>
+        </div>
       </div>
-    </div>
 
-    <div class="field is-grouped">
-      <div class="control">
-        <button class="button is-link submit-post">Submit Post</button>
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link submit-post">Submit Post</button>
+        </div>
       </div>
-    </div>
-
+    </form>
   </div>
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
