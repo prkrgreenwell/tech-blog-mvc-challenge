@@ -1,3 +1,5 @@
+/** @format */
+
 document.addEventListener("DOMContentLoaded", () => {
   // Functions to open and close a modal
   function openModal($el) {
@@ -53,21 +55,23 @@ const postFormHandler = async (event) => {
   const title = document.querySelector(".post-title").value;
   const post_text = document.querySelector(".post-content").value;
 
-  const response = await fetch("api/post", {
-    method: "POST",
-    body: JSON.stringify({
-      title,
-      post_text,
-    }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  if (title && post_text) {
+    const response = await fetch("api/post", {
+      method: "POST",
+      body: JSON.stringify({
+        title,
+        post_text,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-  if (response.ok) {
-    closeModal(document.querySelector(".modal"));
-  } else {
-    alert("Failed to add post");
+    if (response.ok) {
+      closeModal(document.querySelector(".modal"));
+    } else {
+      alert("Failed to add post");
+    }
   }
 };
 

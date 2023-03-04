@@ -14,6 +14,7 @@ router.post("/", async (req, res) => {
     req.session.save(() => {
       req.session.loggedIn = true;
     });
+    res.status(200).json(newPost);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
