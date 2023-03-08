@@ -39,9 +39,15 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button is-primary">
-                <strong>Log In</strong>
-              </a>
+              {{#if logged_in}}
+                <a class="button is-danger">
+                  <strong>Log In</strong>
+                </a>
+              {{else}}
+                <a class="button is-primary" href="/login">
+                  <strong>Log In</strong>
+                </a>
+              {{/if}}
             </div>
           </div>
         </div>
@@ -54,5 +60,8 @@
       defer
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
     ></script>
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
 </html>
