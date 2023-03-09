@@ -13,7 +13,10 @@
         {{post.post_text}}
       </p>
     </div>
-    <div class="comment-button">
+    <button
+  class="button is-dark js-modal-trigger"
+  data-target="create-comment-modal"
+  id="create-comment"
       <button class="button is-dark">Comment</button>
     </div>
 
@@ -23,3 +26,33 @@
 
   </article>
 {{/each}}
+
+<div id="create-comment-modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content card">
+    <form id="create-comment-form">
+
+
+      <div class="field">
+        <label class="label">Comment:</label>
+        <div class="control">
+          <textarea
+            class="textarea comment-content"
+            placeholder="Write your comment here"
+            id="comment-content"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link submit-post" id="post-button">Submit
+            Comment</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<script src="./js/create-comment.js"></script>
