@@ -52,11 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const postFormHandler = async (event) => {
   event.preventDefault();
-  const title = document.querySelector(".post-title").value;
-  const post_text = document.querySelector(".post-content").value;
+  const title = document.querySelector("#post-title").value;
+  const post_text = document.querySelector("#post-content").value;
 
   if (title && post_text) {
-    const response = await fetch("api/post", {
+    const response = await fetch("/api/post", {
       method: "POST",
       body: JSON.stringify({
         title,
