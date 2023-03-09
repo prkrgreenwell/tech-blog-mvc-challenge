@@ -40,7 +40,7 @@ router.post("/login", async (req, res) => {
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: "Incorrect email of password, please try again" });
+        .json({ message: "Incorrect email or password, please try again" });
       return;
     }
 
@@ -50,6 +50,7 @@ router.post("/login", async (req, res) => {
       res.json({ user: userData, message: "You are now logged in" });
     });
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
