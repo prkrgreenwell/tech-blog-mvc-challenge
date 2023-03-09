@@ -56,7 +56,7 @@ const postFormHandler = async (event) => {
   const post_text = document.querySelector("#post-content").value;
 
   if (title && post_text) {
-    const response = await fetch("/api/post", {
+    const response = await fetch("/api/posts", {
       method: "POST",
       body: JSON.stringify({
         title,
@@ -68,7 +68,7 @@ const postFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      closeModal(document.querySelector(".modal"));
+      document.location.reload();
     } else {
       alert("Failed to add post");
     }
